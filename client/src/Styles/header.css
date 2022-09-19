@@ -23,9 +23,19 @@ header{
     gap: 5vw;
     list-style: none;
 }
-.header-nav ul button{
+.header-nav button{
     outline: none;
     border: none;
     background-color: inherit;
     font-size: 1.1rem;
+}
+
+.header-nav button{
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-bottom: 0px solid rgb(162, 140, 121);
+}
+.header-nav button:hover{
+    transform: scale(1.05);
+    border-bottom: 2px solid rgb(162, 123, 92);
+    color: rgb(194, 194, 173);
 }
