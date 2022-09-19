@@ -1,0 +1,45 @@
+/* color palette: https://colorhunt.co/palette/fcf8e894b49fdf786176549a
+rgb(44, 54, 57)     - dark1
+rgb(63, 78, 79)     - dark2
+rgb(162, 123, 92)   - brown
+rgb(220, 215, 201)  - light
+*/
+
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: beige;
+}
+html {
+    background-color: rgb(44, 54, 57);
+}
+body{
+    margin: 0;
+}
+.root{
+    height: 100%;
+}
+
+
+
+.MainContent{
+    width: 100vw;
+    height: 200vh;
+}
+
+/* elements above fold */
+
+.above-fold{
+    font-size: 4rem;
+    padding-top: 10vh;
+}
+.above-fold h6{
+    margin: 0;
+}
+.intro-text{
+    position: absolute;
+    top: 40%;
+    margin-left: 5vw;
+}
+.intro-text-second{
+    font-size: 4.5rem;
+}
