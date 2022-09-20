@@ -10,6 +10,7 @@ import './Styles/footer.css';
 import './Styles/header.css';
 import './Styles/main.css';
 import './Styles/effects.css';
+import './Styles/aboutSct.css';
 
 // js files
 import headerFade from './Animations/headerFade';

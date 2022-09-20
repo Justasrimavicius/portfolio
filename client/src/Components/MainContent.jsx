@@ -3,11 +3,16 @@ import { useEffect } from 'react';
 
 import MouseCursorEffect from '../Animations/MouseCursorEffect';
 
+import AboutMe from '../Components/MainSections/AboutMe';
+
 function MainContent() {
 
     useEffect(()=>{
         MouseCursorEffect();
-        document.querySelector('.intro-text').classList.add('left-fadein');
+        document.querySelector('.intro-text').classList.add('fadein');
+        setTimeout(() => {
+            const miniAbout = document.querySelector('.intro-text-miniAbout');
+            miniAbout.classList.add('fadein');miniAbout.style.opacity='1'}, 666);
     },[])
 
     return (
@@ -15,18 +20,26 @@ function MainContent() {
             <canvas id='myCanvas'></canvas>
             <div className='above-fold'>
                 <div className='intro-text'>
-                    <h6 className='intro-text-first'>Hello,<br></br>
-                        my name is
+                    <h6 className='intro-text-first'>
+                        Frontend
                     </h6>
                     <h6 className='intro-text-second'>
-                        Justinas.
+                        website
                     </h6>
                     <h6 className='intro-text-third'>
-                        I'm a<br></br>
-                        web developer.
+                        developer
                     </h6>
                 </div>
+                <div className='intro-text-miniAbout'>
+                    <h4>
+                        I am a web developer that specializes in frontend engineering. <br></br>
+                        I have been self-teaching since 2022 spring and have fallen in love <br></br>
+                         with the journey of continous learning!<br></br>
+                    </h4>
+                    <button>CONTACT ME</button>
+                </div>
             </div>
+            <AboutMe />
         </main>
     );
 }

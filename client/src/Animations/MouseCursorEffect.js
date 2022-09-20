@@ -1,5 +1,3 @@
-
-
 function MouseCursorEffect(){
 
 /*VARIABLES*/
@@ -116,6 +114,10 @@ function createLetters() {
 
 createLetters();
 update();
+
+window.addEventListener('resize',(ev)=>{
+    update();
+})
 
 // document.getElementById('close').onclick = function() {
 //     this.parentElement.style.visibility = 'hidden';

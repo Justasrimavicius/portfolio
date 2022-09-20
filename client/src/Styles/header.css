@@ -2,7 +2,7 @@ header{
     height: 10vh;
     width: 90%;
     position: fixed;
-    background-color: rgb(63, 78, 79);
+    background-color: rgb(44, 54, 57);
 
     transition: 1s all;
 
@@ -11,6 +11,7 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 0% 5%;
+    z-index: 999;
 }
 .header span{
     font-size: 1.5rem;
@@ -38,4 +39,11 @@ header{
     transform: scale(1.05);
     border-bottom: 2px solid rgb(162, 123, 92);
     color: rgb(194, 194, 173);
+}
+.headerDivider{
+    position: fixed;
+    margin-top: 10vh;
+    color: beige;
+    width: 100vw;
+    margin-left: -5vw;
 }
