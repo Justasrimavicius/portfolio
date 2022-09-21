@@ -17,7 +17,7 @@ var characterList = ['<html>', '<br>', '3rem', '<div>', 'display:flex', 'app.use
 //stocks possible character attributes
 var layers = {
     n: 5, //number of layers
-    letters: [20, 16, 14, 12, 10], //letters per layer (starting from the deepest layer)
+    letters: [40, 30, 30, 24, 20], //letters per layer (starting from the deepest layer)
     coef: [0.1, 0.2, 0.3, 0.4, 1], //how much the letters move from the mouse (starting from the deepest layer)
     size: [16, 22, 36, 40, 46],
     color: ['rgb(33, 41, 43)', 'rgb(62, 74, 77)', 'rgb(68, 92, 98)', 'rgb(110, 110, 92)', 'rgba(162, 123, 92,0.5)'], //color of the letters (starting from the deepest layer)

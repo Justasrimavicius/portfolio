@@ -5,6 +5,13 @@ import MouseCursorEffect from '../Animations/MouseCursorEffect';
 
 import AboutMe from '../Components/MainSections/AboutMe';
 
+
+
+// MUI
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FacebookIcon from '@mui/icons-material/Facebook';
+
 function MainContent() {
 
     useEffect(()=>{
@@ -17,6 +24,18 @@ function MainContent() {
 
     return (
         <main className='MainContent'>
+            <div className='gmail-dash'>
+                <a href='mailto:justinas.rimavicius1@gmail.com'>justinas.rimavicius1@gmail.com</a>
+                <div className='dash-for-gmail'></div>
+            </div>
+            <div className='socials-dash'>
+                <div className='socials-holder'>
+                    <GitHubIcon fontSize='large'/>
+                    <LinkedInIcon fontSize='large'/>
+                    <FacebookIcon fontSize='large'/>
+                    <div className='dash-for-socials'></div>
+                </div>
+            </div>
             <canvas id='myCanvas'></canvas>
             <div className='above-fold'>
                 <div className='intro-text'>

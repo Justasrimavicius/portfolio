@@ -4,7 +4,6 @@ rgb(63, 78, 79)     - dark2
 rgb(162, 123, 92)   - brown
 rgb(220, 215, 201)  - light
 */
-
 *{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: beige;
@@ -22,7 +21,8 @@ body{
 
 .MainContent{
     width: 100vw;
-    height: 200vh;
+    height: 400vh;
+    z-index: -1;
 }
 
 /* elements above fold */
@@ -30,12 +30,12 @@ body{
 .above-fold{
     padding-top: 10vh;
     height: 90vh;
-    z-index: 100;
+    z-index: -10;
 }
 .intro-text{
     position: absolute;
     top: 30%;
-    margin-left: 5vw;
+    margin-left: 15vw;
     /* translate for fade in effect */
     transform: translate(-100%); 
     
@@ -45,7 +45,7 @@ body{
     font-size: 2rem;
     position: absolute;
     top: 50%;
-    margin: 0 5vw 0 50vw;
+    margin: 0 15vw 0 50vw;
     text-align: right;
     /* translate and opacity for fade in effect */
     transform: translateY(200%);
@@ -90,9 +90,73 @@ body{
 #myCanvas{
     position: absolute;
     width: 100vw;
-    height: 120vh;
-    top: 10%;
+    height: 160vh;
+    top: -60vh;
+    z-index: -100;
 }
+
+/* -------------------- side sections for gmail -------------------- */
+.socials-dash{
+    /* opacity: 0; */
+}
+.gmail-dash a{
+    text-decoration: none;
+    font-size: 0.8rem;
+    position: fixed;
+    bottom: 28vh;
+    right: 0vw;
+
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+
+    letter-spacing: 3px;
+    z-index: 100;
+}
+.gmail-dash a:hover{
+    color: #749EB2;
+}
+.dash-for-gmail{
+    position: fixed;
+    bottom: -2vh;
+    right: 0vw;
+    background-color: black;
+    height: 2px;
+    width: 240px;
+    transform: rotate(90deg);
+}
+
+/* -------------------- side sections for socials -------------------- */
+.socials-dash{
+    /* opacity: 0; */
+}
+.socials-holder{
+    position: fixed;
+    bottom: -16vh;
+    left: 8vw;
+
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.gmail-dash a:hover{
+    color: #749EB2;
+}
+.dash-for-socials{
+    /* position: fixed;
+    bottom: -16vh;
+    left: 8vw; */
+    background-color: black;
+    height: 240px;
+    width: 2px;
+    margin-left: 14.5px;
+}
+
+
 
 
 /* Mobile users css */
@@ -104,26 +168,40 @@ body{
         margin-top: -8vh;
         margin-left: 5vw;
     }
-    #myCanvas{
-        height: 90vh;
-    }
+
 
 
 
 
     .intro-text-miniAbout{
         font-size: 1.4rem;
-        width: 80%;
         margin: 0;
         margin-top: 10vh;
-        margin-left: 15vw;
+        margin-left: 20vw;
+    }
+    .gmail-dash{
+        visibility:hidden;
+    }
+    .socials-dash{
+        visibility: hidden;
     }
   }
-@media (max-width: 800px) {
+@media (max-width: 992px) {
     .intro-text h6{
         font-size: 3.8rem;
     }
+    .intro-text{
+        margin-left: 5vw;
+    }
     .intro-text-miniAbout{
         font-size: 1.4rem;
+        margin: 0 5vw 0 50vw;
+
+    }
+    .gmail-dash{
+        visibility:hidden;
+    }
+    .socials-dash{
+        visibility: hidden;
     }
 }
