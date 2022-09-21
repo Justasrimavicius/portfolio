@@ -4,7 +4,7 @@ rgb(63, 78, 79)     - dark2
 rgb(162, 123, 92)   - brown
 rgb(220, 215, 201)  - light
 */
-*{
+*:not(path){
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: beige;
 }
@@ -59,7 +59,7 @@ body{
 }
 .intro-text-miniAbout button{
     border: none;
-    color: rgb(162, 123, 92);
+    color: #749EB2;
     background-color: rgba(0, 0, 0, 0);
     font-size: 1.5rem;
     font-weight: bold;
@@ -114,9 +114,18 @@ body{
 
     letter-spacing: 3px;
     z-index: 100;
+
+    transition: 1s all;
 }
 .gmail-dash a:hover{
     color: #749EB2;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+
+    transform: translate(0%, -100%) rotate(90deg);
 }
 .dash-for-gmail{
     position: fixed;
@@ -129,9 +138,6 @@ body{
 }
 
 /* -------------------- side sections for socials -------------------- */
-.socials-dash{
-    /* opacity: 0; */
-}
 .socials-holder{
     position: fixed;
     bottom: -16vh;
@@ -147,13 +153,18 @@ body{
     color: #749EB2;
 }
 .dash-for-socials{
-    /* position: fixed;
-    bottom: -16vh;
-    left: 8vw; */
     background-color: black;
     height: 240px;
     width: 2px;
     margin-left: 14.5px;
+}
+.socials-holder > svg:nth-child(-n+3){
+    transition: 1s all;
+    color: beige;
+}
+.socials-holder > svg:nth-child(-n+3):hover{
+    transform: scale(1.1);
+    color: #749EB2;
 }
 
 
