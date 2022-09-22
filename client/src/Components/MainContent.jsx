@@ -31,6 +31,7 @@ function MainContent() {
                     <a href='mailto:justinas.rimavicius1@gmail.com'>justinas.rimavicius1@gmail.com</a>
                     <div className='dash-for-gmail'></div>
                 </div>
+                {/* DONT FORGET TO REFERENCE Brittany Chang FOR THE SIDE DASHES */}
                 <div className='socials-dash'>
                     <div className='socials-holder'>
                         <GitHubIcon fontSize='large'/>

@@ -10,6 +10,8 @@ function TextTypingEffect(props) {
     const fullText = props.text.fullText;
 
     const [finalText, setFinalText] = useState('');
+    const [startAnimation, setStartAnimation] = useState(null);
+
 
     function textTypingRecursion(i){                    // initial text typing. Types out the eraseText, then calls fullTextRecursion.
         text+=eraseText[i];
@@ -31,14 +33,12 @@ function TextTypingEffect(props) {
         if(j==0 && eraseText.length>0){
             setTimeout(() => {
                 eraseText = eraseText.replace(/.$/,"");
-                console.log(eraseText)
                 text=text.slice(0,-1);
                 setFinalText(text);
                 fullTextRecursion(j);
             }, 66);
         } else {
             setTimeout(() => {
-                console.log(j)
                 text+=fullText[j];
                 setFinalText(text);
                 if(j<fullText.length-1){
@@ -56,6 +56,7 @@ function TextTypingEffect(props) {
 
     },[])
 
+
     useEffect(()=>{                                         // cursor blinking effect
         const cursor = document.querySelector('.cursor')
         setInterval(() => {
@@ -65,12 +66,14 @@ function TextTypingEffect(props) {
                 cursor.style.opacity='1';
             }
         }, 600);
+    
     },[])
+
 
     return (
         <span className='typing-span'>
             {finalText}<span className='cursor'>|</span>
-        </span>
+        </span> 
     );
 }
 
