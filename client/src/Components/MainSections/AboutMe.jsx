@@ -41,7 +41,10 @@ function AboutMe() {
                                 Powered by coffee and sleepless nights, my web development journey started in 2022 spring. Following <a href='https://theodinproject.com'>TheOdinProject</a> and
                                 other various online and in-person resources I managed to understand how the web and its pieces work.
                             </span>
-                            <img src={require('../../photo.jpg')} ></img>
+                            <div className='img-outline'>
+                                <img src={require('../../photo.jpg')} ></img>
+                                <div></div>
+                            </div>
                         </div>
                     : null}
             </div>

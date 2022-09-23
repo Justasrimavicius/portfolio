@@ -1,16 +1,16 @@
 .about h5{
     font-size: 2rem;
-    margin: 3vh 0 5vh 0;
     text-align: right;
-    margin-right: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3vh;
 }
 .divider{
     width: 100vw;
     height: 3px;
     background-color: white;
-}
-.about-first-paragraph h6{
-    font-size: 3rem;
 }
 .name{
     width: 100vw;
@@ -20,15 +20,38 @@
     justify-content: center;
     text-align: center;
 }
+.aboutMe-first-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .aboutMe-first-paragraph{
     font-size: 1.4rem;
-    width: 30vw;
-    margin: 5vh 30vh 0 30vh;
+    width: 70vw;
+    margin: 5vh 0vh 0 0vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 .aboutMe-first-paragraph img{
-    width: 40vw;
-    height: auto;
-    padding-top: 10vh;
+    width: 200px;
+    height: 250px;
+
+}
+.img-outline div{
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    margin-top: -235px;
+    margin-left: -15px;
+    outline: 2px solid white;
+    z-index: -1;
+}
+.aboutMe-first-paragraph span{
+    width: 30vw;
 }
 
 
