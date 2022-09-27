@@ -11,6 +11,7 @@ import './Styles/header.css';
 import './Styles/main.css';
 import './Styles/effects.css';
 import './Styles/aboutSct.css';
+import './Styles/projectsSct.css';
 
 // js files
 import headerFade from './Animations/headerFade';

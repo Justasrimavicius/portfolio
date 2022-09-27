@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import MouseCursorEffect from '../Animations/MouseCursorEffect';
 
 import AboutMe from '../Components/MainSections/AboutMe';
-
+import Projects from '../Components/MainSections/Projects';
 
 
 // MUI
@@ -60,6 +60,7 @@ function MainContent() {
                     </div>
                 </div>
                 <AboutMe />
+                <Projects />
             </main>
     );
 }

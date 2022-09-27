@@ -1,0 +1,74 @@
+.projects h4{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 3vh;
+}
+.projects-holder{
+    width: 60vw;
+    margin-left: 20vw;
+    display: grid;
+    grid-template: auto/1fr 1fr;
+}
+
+
+
+
+
+
+
+.BashTerminal{
+    margin: 5px;
+    width: 90%;
+    height: 250px;
+    background-color: rgb(26, 26, 26);
+    border-radius: 15px;
+}
+.BashTerminal .upper-stripe{
+    width: 100%;
+    height: 15%;
+    background-color: gray;
+    border-radius: 15px 15px 0 0;
+
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr;
+}
+.BashTerminal-name{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.BashTerminal-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    align-items: center;
+    gap: 6px;
+}
+.upper-stripe .red{
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 20px;
+    margin-left: 8px;
+
+}
+.upper-stripe .green{
+    width: 15px;
+    height: 15px;
+    background-color: green;
+    border-radius: 20px;
+
+}.upper-stripe .orange{
+    width: 15px;
+    height: 15px;
+    background-color: orange;
+    border-radius: 20px;
+}
