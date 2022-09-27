@@ -5,7 +5,12 @@ import { useState } from 'react';
 // css rules are on projectSct.css
 import Warning from '../Warning.jsx';
 
-function BashTerminal() {
+// import '../../photos/dsa.jpeg';
+
+
+function BashTerminal(props) {
+
+    const [projectName, setProjectName] = useState(props.name);
 
     const [bashButtons, setBashButtons] = useState(false);
     const [warning, setWarning] = useState([]);
@@ -37,9 +42,22 @@ function BashTerminal() {
         }
         
     }
+    
+    function minimizeProject(e){
+        console.log('minimze');
+        console.log(projectName);
+        const project = document.getElementById(projectName);
+        project.style.transform='scale(0.3)'
+        project.style.position='fixed';
+        project.style.bottom='0';
+        project.style.right='0';
+    }
+    useEffect(()=>{
+        console.log(props.picture)
+    },[])
 
     return (
-        <div className='BashTerminal'>
+        <div className='BashTerminal' id={props.name}>
             <div className='upper-stripe'>
                 <div className='BashTerminal-buttons' onMouseEnter={()=>{setBashButtons(true)}} onMouseLeave={()=>{setBashButtons(false)}}>
                     {canClickRedButton == true ? <div className='red' onClick={()=>{callWarning()}}><div className='red-dot'></div></div> :
@@ -47,18 +65,22 @@ function BashTerminal() {
                     
                     
                     
-                    <div className='orange'>
+                    <div className='orange' onClick={(e)=>{minimizeProject(e)}}>
                         {bashButtons == true ? <div className='orange-dash'></div> : null}
                     </div>
                     <div className='green'>
                         {bashButtons == true ? <svg id="eX0bv67xGBD1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 20 20" shapeRendering="geometricPrecision" textRendering="geometricPrecision"><path d="M0,0v8L8,0h-8Z" transform="translate(1.878667 1.735637)" stroke="#191919" strokeWidth="0.5"/><path d="M16,8v8h-8l8-8Z" transform="translate(-2.714344-2.264363)" stroke="#191919" strokeWidth="0.5"/></svg> : null}
                     </div>
                 </div>
-                <div className='BashTerminal-name'><span>client-zsh--80x24</span></div>
+                <div className='BashTerminal-name'><span>{props.name}-zsh--80x24</span></div>
 
             </div>
-            {/* <img src='../../curlyBraces.png' alt='curlybraces project'></img> */}
-            <Warning message={warning}></Warning>
+            <div className='terminal'>
+                <div>justinas@Justinass-MacBook-Pro client % npm load-image</div>
+                {props.picture}
+                {/* <img src={`${props.picture}`} alt='curlybraces project' style={{width:'100%',height:'auto'}}></img> */}
+                <Warning message={warning}></Warning>
+            </div>
         </div>
     );
 }

@@ -11,28 +11,37 @@
     width: 60vw;
     margin-left: 20vw;
     display: grid;
-    grid-template: auto/1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fill,minmax(350px, 1fr));
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
 }
-
-
-
-
-
-
+.projects-holder img{
+    width: 100%;
+    height: auto;
+}
 
 .BashTerminal{
     margin: 5px;
-    width: 90%;
-    height: 250px;
+    width: 100%;
+    height: 400px;
     background-color: rgb(26, 26, 26);
     border-radius: 15px;
     box-shadow: 10px 20px 20px 5px rgba(0, 0, 0, 0.282);
+
+    /* overflow: hidden; */
+}
+.terminal{
+    height: 85%;
+    overflow: scroll;
 }
 .BashTerminal .upper-stripe{
     width: 100%;
     height: 15%;
     background-color: gray;
     border-radius: 15px 15px 0 0;
+    position: sticky;
 
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -101,4 +110,28 @@
     background-color: rgb(25, 25, 25);
     width: 60%;
     height: 1.5px;
+}
+
+
+.curlyBraces{
+    width: 100%;
+    height: 100%;
+}
+.groupPoject{
+    width: 100%;
+    height: 100%;
+}
+.coinTrace{
+    width: 100%;
+    height: 100%;
+}
+.battleships{
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 635px){
+    .projects-holder{
+        grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+    }
 }
