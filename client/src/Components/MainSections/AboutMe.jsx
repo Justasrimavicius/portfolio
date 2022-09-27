@@ -32,9 +32,8 @@ function AboutMe() {
     useEffect(()=>{
         if(aboutMe!=null){
             setTimeout(() => {
-            document.querySelector('.aboutMe-first-paragraph').style.opacity='1';
-            document.querySelector('.aboutMe-second-section').style.opacity='1';
-                
+                document.querySelector('.aboutMe-first-paragraph').style.opacity='1';
+                document.querySelector('.aboutMe-second-section').style.opacity='1';
             }, 333);
         }
     },[aboutMe])
@@ -45,14 +44,14 @@ function AboutMe() {
             <h4>About me</h4>
             <div className='aboutMe-first-section'>
                 {animation==true ? <TextTypingEffect text={{eraseText:'01001000 01000101 01011001', fullText:'Hello. My name is Justinas.'}} speed={'200'} /> : <span className='typing-span'>Hey! Over here!</span>}
-                    {aboutMe ? 
+                    {aboutMe ?
                         <div className='aboutMe-first-paragraph'>
                             <span className='aboutMe-first-paragraph-text'>
                                 Powered by coffee and sleepless nights, my web development journey started in 2022 spring. Following <a href='https://theodinproject.com'>TheOdinProject</a> and
                                 other various online and in-person resources I managed to get an understanding of how the web and its pieces work.
                             </span>
                             <div className='img-outline'>
-                                <img src={require('../../photo.jpg')} ></img>
+                                <img src={require('../../photos/photo.jpg')} ></img>
                                 <div></div>
                             </div>
                         </div>

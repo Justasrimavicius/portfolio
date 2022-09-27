@@ -26,6 +26,7 @@
     height: 250px;
     background-color: rgb(26, 26, 26);
     border-radius: 15px;
+    box-shadow: 10px 20px 20px 5px rgba(0, 0, 0, 0.282);
 }
 .BashTerminal .upper-stripe{
     width: 100%;
@@ -59,6 +60,16 @@
     border-radius: 20px;
     margin-left: 8px;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.red .red-dot{
+    background-color: rgb(25, 25, 25);
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
 }
 .upper-stripe .green{
     width: 15px;
@@ -66,9 +77,28 @@
     background-color: green;
     border-radius: 20px;
 
-}.upper-stripe .orange{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.green svg{
+    margin-top: 2px;
+    margin-left: 3px;
+}
+.upper-stripe .orange{
     width: 15px;
     height: 15px;
     background-color: orange;
     border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.orange-dash{
+    background-color: rgb(25, 25, 25);
+    width: 60%;
+    height: 1.5px;
 }
