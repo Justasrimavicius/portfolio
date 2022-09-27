@@ -103,9 +103,6 @@ body{
 }
 
 /* -------------------- side sections for gmail -------------------- */
-.socials-dash{
-    /* opacity: 0; */
-}
 .gmail-dash a{
     text-decoration: none;
     font-size: 0.8rem;

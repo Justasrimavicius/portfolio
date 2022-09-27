@@ -8,9 +8,6 @@ import AboutMe from '../Components/MainSections/AboutMe';
 
 
 // MUI
-import { useTheme } from '@emotion/react';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';

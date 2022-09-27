@@ -29,17 +29,27 @@ function AboutMe() {
         })
     },[])
 
+    useEffect(()=>{
+        if(aboutMe!=null){
+            setTimeout(() => {
+            document.querySelector('.aboutMe-first-paragraph').style.opacity='1';
+            document.querySelector('.aboutMe-second-section').style.opacity='1';
+                
+            }, 333);
+        }
+    },[aboutMe])
+
     return (
         <div className='about'>
             <div className='divider'></div>
-            <h5>About me</h5>
+            <h4>About me</h4>
             <div className='aboutMe-first-section'>
                 {animation==true ? <TextTypingEffect text={{eraseText:'01001000 01000101 01011001', fullText:'Hello. My name is Justinas.'}} speed={'200'} /> : <span className='typing-span'>Hey! Over here!</span>}
                     {aboutMe ? 
                         <div className='aboutMe-first-paragraph'>
                             <span className='aboutMe-first-paragraph-text'>
                                 Powered by coffee and sleepless nights, my web development journey started in 2022 spring. Following <a href='https://theodinproject.com'>TheOdinProject</a> and
-                                other various online and in-person resources I managed to understand how the web and its pieces work.
+                                other various online and in-person resources I managed to get an understanding of how the web and its pieces work.
                             </span>
                             <div className='img-outline'>
                                 <img src={require('../../photo.jpg')} ></img>
@@ -48,6 +58,32 @@ function AboutMe() {
                         </div>
                     : null}
             </div>
+            {aboutMe ?
+            <div className='aboutMe-second-section'>
+                <h5>acquired skills:</h5>
+                <div style={{width:'100vw',display:'flex',flexDirection:'row',justifyContent:'center'}}>
+                    <div className='skills'>
+                        <div className='development-skills'>
+                            <div>
+                                <button className='js'>Javascript</button>
+                                <button className='html'>HTML</button>
+                                <button className='css'>CSS</button>
+                                <button className='fb'>Firebase</button>
+
+                                <button className='mdb'>MongoDB</button>
+                                <button className='rjs'>React.js</button>
+                                <button className='mui'>MaterialUI</button>
+
+
+                                <button className='njs'>NodeJS ecosystem</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div> : null}
         </div>
     );
 }

@@ -1,4 +1,8 @@
-.about h5{
+.about{
+    background-image: linear-gradient(rgb(44, 54, 57), rgb(31, 38, 39));
+    height: 100vh;
+}
+.about h4{
     font-size: 2rem;
     text-align: right;
     display: flex;
@@ -35,11 +39,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+
+    transition: 1s all;
+    opacity: 0; /* for fade in */
 }
 .aboutMe-first-paragraph img{
     width: 200px;
     height: 250px;
 
+}
+.img-outline img{
+    z-index: 100;
 }
 .img-outline div{
     width: 200px;
@@ -48,26 +58,109 @@
     margin-top: -235px;
     margin-left: -15px;
     outline: 2px solid white;
-    z-index: -1;
 }
 .aboutMe-first-paragraph span{
-    width: 30vw;
+    width: 35vw;
+    text-align: left;
+}
+.skills{
+    width: 55vw;
+    height: 200px;
+    background-color: rgb(61, 75, 87);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+.skills button{
+    border: none;
+
+    /* background-color: gray; */
+    color: black;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+    font-size: 1.3rem;
+
+    padding: 5px;
+    margin: 5px;
+
+    transition: 0.5s all;
+}
+.skills button:hover{
+    background-color: #749EB2;
+    color: bisque;
+}
+
+.development-skills{
+    width: 100%;
+    margin: 50px;
+}
+.development-skills div{
+    display: grid;
+    grid-template: 1fr 1fr 1fr/1fr 1fr 1fr 1fr;
+}
+.njs{
+    grid-row: 3/4;
+    grid-column: 1/5;
+}
+.rjs{
+    grid-column: 2/4;
+}
+.future-skills div{
+    display: grid;
+    grid-template-columns: 1fr/1fr 1fr 1fr;
+}
+.future-skills button{
+    background-color: gray;
+}
+
+
+.aboutMe-second-section{
+    width: 100vw;
+    height: 50vh;
+    margin-top: 50px;
+
+    opacity: 0;
+    transition: 1s all;
+}
+.aboutMe-second-section h5{
+    width: 100vw;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
 
 
 
-/* for phones */
-
-@media (max-width: 480px) {
+@media (max-width: 635px){
     .about{
         margin-top: 0;
     }
     .aboutMe-first-paragraph{
         margin: 0;
         margin-top: 5vh;
-    }
 
+        flex-direction:column-reverse;
+    }
+    .aboutMe-first-paragraph span{
+        text-align: center;
+        width: 80vw;
+        margin-top: 50px;
+    }
+    .skills{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+    .img-outline div{
+        visibility: hidden;
+    }
 
 }
