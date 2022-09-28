@@ -45,10 +45,30 @@ function BashTerminal(props) {
     
     function minimizeProject(e){
         e.stopPropagation();
-        console.log('minimze');
-        const project = document.getElementById(projectName);
-        project.classList.add('minimized-BashTerminal');
+        console.log(e);
 
+
+        const project = document.getElementById(projectName);
+        
+        const left = project.getBoundingClientRect().left;
+        const width = project.getBoundingClientRect().width;
+        const height = project.getBoundingClientRect().height;
+
+        console.log(project.getBoundingClientRect())
+        project.classList.add('minimized-BashTerminal-preAnim');
+        project.style.position='fixed';
+
+        // very weird way of setting the positions, but it worked for this case. .getBoundingClientRect() values for right were inacurate and i can use left value
+        // because the terminal, when minimzed, should stay at the bottom right corner at the same place(it moves a little when the value is left and not right)
+        project.style.bottom=`${window.innerHeight-height-e.clientY+24}px`;
+        project.style.right=`${window.innerWidth-width-left-5}px`;
+        project.style.width=`${width}px`;
+        project.style.height=`${height}px`;
+        
+
+        setTimeout(() => {
+            project.classList.add('minimized-BashTerminal');
+        }, 50);
 
         const projectAbout = document.querySelector(`.${projectName}`);
         projectAbout.style.display='none';
@@ -57,13 +77,17 @@ function BashTerminal(props) {
     }
     
     function bashTerminalClicked(){
-            console.log('asd')
             const project = document.getElementById(projectName);
             const projectAbout = document.querySelector(`.${projectName}`);
             if(project.classList.contains('minimized-BashTerminal')){
-                console.log('asos')
                 project.classList.remove('minimized-BashTerminal');
+                project.classList.remove('minimized-BashTerminal-preAnim');
+                project.style.position='relative';
+                project.style.bottom='unset';
+                project.style.right='unset';
                 projectAbout.style.display='block';
+                
+                // should add animations to get the bashTerminal(project) back to the grid
             }      
 
     }
