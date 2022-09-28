@@ -44,20 +44,32 @@ function BashTerminal(props) {
     }
     
     function minimizeProject(e){
+        e.stopPropagation();
         console.log('minimze');
-        console.log(projectName);
         const project = document.getElementById(projectName);
-        project.style.transform='scale(0.3)'
-        project.style.position='fixed';
-        project.style.bottom='0';
-        project.style.right='0';
+        project.classList.add('minimized-BashTerminal');
+
+
+        const projectAbout = document.querySelector(`.${projectName}`);
+        projectAbout.style.display='none';
+
+
     }
-    useEffect(()=>{
-        console.log(props.picture)
-    },[])
+    
+    function bashTerminalClicked(){
+            console.log('asd')
+            const project = document.getElementById(projectName);
+            const projectAbout = document.querySelector(`.${projectName}`);
+            if(project.classList.contains('minimized-BashTerminal')){
+                console.log('asos')
+                project.classList.remove('minimized-BashTerminal');
+                projectAbout.style.display='block';
+            }      
+
+    }
 
     return (
-        <div className='BashTerminal' id={props.name}>
+        <div className='BashTerminal' id={props.name} onClick={()=>{bashTerminalClicked()}}>
             <div className='upper-stripe'>
                 <div className='BashTerminal-buttons' onMouseEnter={()=>{setBashButtons(true)}} onMouseLeave={()=>{setBashButtons(false)}}>
                     {canClickRedButton == true ? <div className='red' onClick={()=>{callWarning()}}><div className='red-dot'></div></div> :
@@ -78,7 +90,6 @@ function BashTerminal(props) {
             <div className='terminal'>
                 <div>justinas@Justinass-MacBook-Pro client % npm load-image</div>
                 {props.picture}
-                {/* <img src={`${props.picture}`} alt='curlybraces project' style={{width:'100%',height:'auto'}}></img> */}
                 <Warning message={warning}></Warning>
             </div>
         </div>

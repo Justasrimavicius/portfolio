@@ -107,7 +107,7 @@ body{
     text-decoration: none;
     font-size: 0.8rem;
     position: fixed;
-    bottom: 28vh;
+    bottom: 240px;
     right: 0vw;
 
     transform: rotate(90deg);
