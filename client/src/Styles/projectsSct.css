@@ -1,3 +1,6 @@
+.BashTerminal-transition-backToGrid{
+    transition: 1s all;
+}
 .projects h4{
     width: 100vw;
     display: flex;
@@ -40,6 +43,7 @@
     background-color: rgb(26, 26, 26);
     border-radius: 15px;
     box-shadow: 10px 20px 20px 5px rgba(0, 0, 0, 0.282);
+
 }
 .terminal{
     height: 85%;
