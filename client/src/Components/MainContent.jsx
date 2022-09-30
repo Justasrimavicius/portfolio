@@ -5,14 +5,17 @@ import MouseCursorEffect from '../Animations/MouseCursorEffect';
 
 import AboutMe from '../Components/MainSections/AboutMe';
 import Projects from '../Components/MainSections/Projects';
-
+import ContactMe from './MainSections/ContactMe';
 
 // MUI
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 
-function MainContent() {
+function MainContent(props) {
+
+
+
 
     useEffect(()=>{
         MouseCursorEffect();
@@ -59,8 +62,9 @@ function MainContent() {
                         <button>CONTACT ME</button>
                     </div>
                 </div>
-                <AboutMe />
-                <Projects />
+                <AboutMe aboutMeRef={props.refs.aboutMeSection}/>
+                <Projects myWorkRef={props.refs.myWorkSection}/>
+                <ContactMe contactMeRef={props.refs.contactMeSection}/>
             </main>
     );
 }

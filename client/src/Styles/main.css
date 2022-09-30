@@ -10,6 +10,7 @@ rgb(220, 215, 201)  - light
 }
 html {
     background-color: rgb(44, 54, 57);
+    scroll-behavior: smooth;
 }
 body{
     margin: 0;
@@ -21,7 +22,7 @@ body{
 
 .MainContent{
     width: 100vw;
-    height: 400vh;
+    min-height: 400vh;
     z-index: -1;
 }
 .typing-span{
@@ -66,19 +67,24 @@ body{
     margin: 0;
 }
 .intro-text-miniAbout button{
-    border: none;
-    color: #749EB2;
-    background-color: rgba(0, 0, 0, 0);
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-top: 10px;
+    background-color: rgb(79, 79, 121);
+    width: 150px;
+    height: 40px;
+    align-self: flex-start;
+    margin-top: 30px;
 
-    transition: 1s all cubic-bezier(0.19, 1, 0.22, 1);
+    font-size: 1.1rem;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(36, 45, 47);
+    color: bisque;
+    border-radius: 3px;
+
+    transition: 0.5s all;
 }
 .intro-text-miniAbout button:hover{
-    color: rgb(63, 78, 79);
     background-color: bisque;
-    border-radius: 5px 5px 5px 5px;
+    color: rgb(36, 45, 47);
+    border: 3px solid rgb(69, 69, 69);
 }
 .intro-text h6{
     font-size: 5rem;

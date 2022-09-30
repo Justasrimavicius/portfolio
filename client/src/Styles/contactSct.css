@@ -1,0 +1,149 @@
+.contactMe{
+    width: 100vw;
+    height: 90vh;
+    background-image: linear-gradient(rgb(44, 54, 57), rgb(18, 22, 23));
+}
+form input,
+form textarea{
+    border-radius: 5px;
+    border: none;
+    color: bisque;
+    font-size: 1.2rem;
+    outline: 1px solid gray;
+    background-color: rgba(136, 136, 136, 0.328);
+    height: 30px;
+    width: 100%;
+}
+form input:focus,
+form textarea:focus{
+    outline: 1px solid rgb(190, 190, 190);
+}
+.contactMe h5{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+.contactMe form{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contactMe button{
+    background-color: rgb(79, 79, 121);
+    width: 100px;
+    height: 30px;
+    align-self: flex-start;
+    margin-top: 30px;
+
+    font-size: 1.1rem;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(36, 45, 47);
+    color: bisque;
+    border-radius: 3px;
+
+    transition: 0.5s all;
+}
+.contactMe button:hover{
+    background-color: bisque;
+    color: rgb(36, 45, 47);
+    border: 3px solid rgb(69, 69, 69);
+}
+label{
+    margin: 6px;
+}
+.first-row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.mailDiv,
+.nameDiv{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.second-row{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.second-row textarea{
+    height: 300px;
+    max-width: 100%;
+
+    max-height: 460px;
+}
+.second-row label{
+    margin: 15px 0 6px 0;
+}
+
+
+.contacting-form{
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 150px 20vh 0 20vh;
+
+}
+.contacting-form-text{
+    width: 30vw;
+    height: 100%;
+}
+.contacting-form-text h6{
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(207, 157, 95);
+    margin-bottom: 0;
+}
+.contacting-form-text p{
+    font-size: 2rem;
+    text-align: center;
+}
+.contacting-form-text p:last-child{
+    font-size: 1.6rem;
+}
+
+
+@media (max-width: 992px){
+    .contacting-form{
+        margin: 150px 0 0 0;
+        justify-content: space-around;
+    }
+}
+@media (max-width: 600px){
+    .contactMe{
+        height: 100vh;
+    }
+    .contacting-form-text{
+        width: 90%;
+        margin-top: 10vh;
+    }
+    .contacting-form{
+        flex-direction: column;
+    }
+    .contactMe form{
+        width: 90vw;
+    }
+}
+@media (max-width: 400px){
+    .contactMe{
+        height: 105vh;
+    }
+    .contactMe form{
+        width: 90vw;
+    }
+    .contacting-form-text{
+        width: 90%;
+        margin-top: 20vh;
+    }
+}

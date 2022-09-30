@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import TextTypingEffect from '../../Animations/TextTypingEffect';
 
-function AboutMe() {
+function AboutMe(props) {
 
     const [animation, startAnimation] = useState(false);
     const [aboutMe, loadAboutMe] = useState(null);
@@ -39,7 +39,7 @@ function AboutMe() {
     },[aboutMe])
 
     return (
-        <div className='about'>
+        <div className='about' ref={props.aboutMeRef}>
             <div className='divider'></div>
             <h4>About me</h4>
             <div className='aboutMe-first-section'>

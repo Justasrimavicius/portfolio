@@ -3,9 +3,9 @@ import React from 'react';
 import BashTerminal from './BashTerminal.jsx';
 
 
-function Projects() {
+function Projects(props) {
     return (
-        <div className='projects'>
+        <div className='projects' ref={props.myWorkRef}>
             <div className='divider'></div>
             <h4>My projects</h4>
             <div className='projects-holder'>
