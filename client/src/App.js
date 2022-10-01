@@ -31,7 +31,7 @@ function App() {
     <div className="App">
       <Header refs={{aboutMeSection,myWorkSection,contactMeSection}}/>
         <MainContent refs={{aboutMeSection,myWorkSection,contactMeSection}}/>
-      <Footer />
+      <Footer refs={{aboutMeSection,myWorkSection,contactMeSection}}/>
     </div>
   );
 }

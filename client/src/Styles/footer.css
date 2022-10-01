@@ -1,0 +1,104 @@
+footer{
+    width: 70vw;
+    height: 35vh;
+    padding: 0 15vw;
+    background-color: rgb(19, 21, 21);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer-upper{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+
+
+.footer-middle{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer-middle ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    list-style: none;
+    padding: 0;
+    width: 70vw;
+    margin: 0 15vw 10px 15vw;
+}
+.footer-middle button{
+    outline: none;
+    border: none;
+    background-color: inherit;
+    font-size: 1.1rem;
+}
+
+.footer-middle button{
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    border-bottom: 0px solid rgb(162, 140, 121);
+}
+.footer-middle button:hover{
+    transform: scale(1.05);
+    border-bottom: 2px solid rgb(162, 123, 92);
+    color: rgb(194, 194, 173);
+}
+.footer-middle .divider{
+    height: 2px;
+    width: 70vw;
+    margin: 0 15vw;
+    background-color: rgb(73, 73, 73);
+}
+
+
+
+.footer-lower{
+    height: 20%;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-bottom: 30px;
+}
+.footer-lower p,
+.footer-lower a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+@media (max-width: 550px){
+    /* .footer-lower{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } */
+    .footer-lower{
+        margin: 0;
+        font-size: 0.9rem;
+    }
+    .footer-lower .copyright{
+        display: none;
+    }
+    .footer-email{
+        display: block;
+    }
+    .footer-lower a{
+        grid-column: 3/4;
+        grid-row: 1/2;
+
+    }
+
+}

@@ -8,9 +8,9 @@ function Header(props) {
                 <span>J. R.</span>
                 <div className='header-nav'>
                     <ul>
-                        <li><button onClick={()=>{props.refs.aboutMeSection.current?.scrollIntoView()}}>About me</button></li>
-                        <li><button onClick={()=>{props.refs.myWorkSection.current?.scrollIntoView()}}>My work</button></li>
-                        <li><button onClick={()=>{props.refs.contactMeSection.current?.scrollIntoView()}}>Contacts</button></li>
+                        <li><button onClick={()=>{props.refs.aboutMeSection.current.scrollIntoView()}}>About me</button></li>
+                        <li><button onClick={()=>{props.refs.myWorkSection.current.scrollIntoView()}}>My work</button></li>
+                        <li><button onClick={()=>{props.refs.contactMeSection.current.scrollIntoView()}}>Contacts</button></li>
                     </ul>
                 </div>
             <div className='divider headerDivider'></div>

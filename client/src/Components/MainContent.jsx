@@ -34,9 +34,9 @@ function MainContent(props) {
                 {/* DONT FORGET TO REFERENCE Brittany Chang FOR THE SIDE DASHES */}
                 <div className='socials-dash'>
                     <div className='socials-holder'>
-                        <GitHubIcon fontSize='large'/>
-                        <LinkedInIcon fontSize='large'/>
-                        <FacebookIcon fontSize='large'/>
+                        <GitHubIcon fontSize='large' onClick={()=>{window.location='https://github.com/Justasrimavicius'}}/>
+                        <LinkedInIcon fontSize='large' onClick={()=>{window.location='https://www.linkedin.com/in/justinas-rimavicius/'}}/>
+                        {/* <FacebookIcon fontSize='large'/> */}
                         <div className='dash-for-socials'></div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@ function MainContent(props) {
                             I have been self-teaching since 2022 spring and have fallen in love <br></br>
                             with the journey of continous learning!<br></br>
                         </h4>
-                        <button>CONTACT ME</button>
+                        <button onClick={()=>{props.refs.contactMeSection.current.scrollIntoView()}}>CONTACT ME</button>
                     </div>
                 </div>
                 <AboutMe aboutMeRef={props.refs.aboutMeSection}/>
