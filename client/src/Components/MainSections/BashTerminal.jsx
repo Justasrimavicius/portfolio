@@ -135,7 +135,7 @@ function BashTerminal(props) {
     }
 
     return (
-        <div className='BashTerminal' id={props.name} onClick={()=>{bashTerminalClicked()}}>
+        <div className='BashTerminal' id={props.name} onClick={()=>{bashTerminalClicked()}} ref={props.outerRef}>
             <div className='upper-stripe'>
                 <div className='BashTerminal-buttons' onMouseEnter={()=>{setBashButtons(true)}} onMouseLeave={()=>{setBashButtons(false)}}>
                     {canClickRedButton == true ? <div className='red' onClick={()=>{callWarning()}}><div className='red-dot'></div></div> :

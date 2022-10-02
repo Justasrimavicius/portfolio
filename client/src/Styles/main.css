@@ -91,9 +91,9 @@ body{
     margin: 0;
     transition: 1s all cubic-bezier(0.23, 1, 0.320, 1);
 }
-.intro-text h6:hover{
-    padding: 10px;
-    transform: translate(30%);
+.intro-text-hovered{
+    transform:scaleY(1.4);
+    /* transform: translate(30%); */
     color: rgb(190, 190, 151);
 }
 .intro-text-second{

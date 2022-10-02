@@ -10,10 +10,22 @@ import ContactMe from './MainSections/ContactMe';
 // MUI
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import FacebookIcon from '@mui/icons-material/Facebook';
+
+
 
 function MainContent(props) {
 
+    function introTextEntered(e){
+        setTimeout(() => {
+            e.target.classList.add('intro-text-hovered')
+        }, 100);
+
+    }
+    function introTextLeft(e){
+        setTimeout(() => {
+            e.target.classList.remove('intro-text-hovered');
+        }, 100);
+    }
 
 
 
@@ -43,13 +55,13 @@ function MainContent(props) {
                 <canvas id='myCanvas'></canvas>
                 <div className='above-fold'>
                     <div className='intro-text'>
-                        <h6 className='intro-text-first'>
+                        <h6 className='intro-text-first' onMouseEnter={(e)=>{introTextEntered(e)}} onMouseLeave={(e)=>{introTextLeft(e)}}>
                             Frontend
                         </h6>
-                        <h6 className='intro-text-second'>
+                        <h6 className='intro-text-second' onMouseEnter={(e)=>{introTextEntered(e)}} onMouseLeave={(e)=>{introTextLeft(e)}}>
                             website
                         </h6>
-                        <h6 className='intro-text-third'>
+                        <h6 className='intro-text-third' onMouseEnter={(e)=>{introTextEntered(e)}} onMouseLeave={(e)=>{introTextLeft(e)}}>
                             developer
                         </h6>
                     </div>

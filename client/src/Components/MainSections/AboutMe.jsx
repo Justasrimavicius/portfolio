@@ -9,21 +9,6 @@ function AboutMe(props) {
     const [aboutMe, loadAboutMe] = useState(null);
 
     useEffect(()=>{
-        
-        function isScrolledIntoView(elem) {                 // function to check if typing element is in view. Start the animation if it is.
-            var rect = elem.getBoundingClientRect();
-            var elemTop = rect.top;
-            var elemBottom = rect.bottom;
-          
-            var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
-            if(isVisible==true){
-                startAnimation(true);
-                setInterval(() => {
-                    loadAboutMe(true);
-                }, 11000);
-            }
-        }
-
         window.addEventListener('scroll',()=>{
             isScrolledIntoView(document.querySelector('.aboutMe-first-section'));
         })
@@ -38,12 +23,26 @@ function AboutMe(props) {
         }
     },[aboutMe])
 
+    function isScrolledIntoView(elem) {                 // function to check if typing element is in view. Start the animation if it is.
+        let rect = elem.getBoundingClientRect();
+        let elemTop = rect.top;
+        let elemBottom = rect.bottom;
+      
+        let isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+        if(isVisible==true){
+            startAnimation(true);
+            setInterval(() => {
+                loadAboutMe(true);
+            }, 6500);
+        }
+    }
+
     return (
         <div className='about' ref={props.aboutMeRef}>
             <div className='divider'></div>
             <h4>About me</h4>
             <div className='aboutMe-first-section'>
-                {animation==true ? <TextTypingEffect text={{eraseText:'01001000 01000101 01011001', fullText:'Hello. My name is Justinas.'}} speed={'200'} /> : <span className='typing-span'>Hey! Over here!</span>}
+                {animation==true ? <TextTypingEffect text={{eraseText:'01001000 01000101 01011001', fullText:'Hello. My name is Justinas.'}} speed={'100'} /> : <span className='typing-span'>Hey! Over here!</span>}
                     {aboutMe ?
                         <div className='aboutMe-first-paragraph'>
                             <span className='aboutMe-first-paragraph-text'>

@@ -28,6 +28,11 @@
     height: auto;
 }
 
+.projectAbout{
+    transform: scale(0) rotate(90deg);
+
+    transition: 1s all;
+}
 .minimized-BashTerminal-preAnim{
     position: fixed !important;
 }
@@ -35,7 +40,7 @@
     position: fixed !important;
     bottom: -200px !important;
     right: -200px !important;
-    transform: rotate(-45deg) scale(0.3);
+    transform: rotate(-45deg) scale(0.3) !important;
 
     transition: 1s all;
 }
@@ -47,6 +52,13 @@
     border-radius: 15px;
     box-shadow: 10px 20px 20px 5px rgba(0, 0, 0, 0.282);
 
+    transform: scale(0) rotate(90deg);
+}
+.popAnim{
+    transform: scale(1) rotate(0deg);
+}
+.popAnim-preAnim{
+    transition: 1s all;
 }
 .terminal{
     height: 85%;
@@ -149,5 +161,8 @@
 @media (max-width: 635px){
     .projects-holder{
         grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+    }
+    .projectAbout{
+        display: none;
     }
 }
