@@ -107,7 +107,10 @@ function BashTerminal(props) {
             project.classList.add('minimized-BashTerminal');
         }, 50);
         const projectAbout = document.querySelector(`.${projectName}`);
-        projectAbout.style.display='none';
+        projectAbout.style.opacity='0';
+        // setTimeout(() => {
+            projectAbout.style.display='none';
+        // }, 500);
     }
     
     function bashTerminalClicked(){
@@ -126,6 +129,9 @@ function BashTerminal(props) {
                 project.style.marginBottom='0px';
 
                 projectAbout.style.display='block';
+                setTimeout(() => {
+                    projectAbout.style.opacity='1';
+                }, 200);
 
                 TerminalsHoveringMouse=0;
 

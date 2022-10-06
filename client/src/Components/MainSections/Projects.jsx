@@ -52,22 +52,34 @@ function Projects(props) {
             <h4>My projects</h4>
             <div className='projects-holder'>
             <BashTerminal outerRef={terminalRef1} name={'GroupProject'} picture={<img src={require('../../photos/groupProject.jpeg')} alt='group project'></img>}/>
-                <div className='GroupProject projectAbout'>
-                    group project
+            <div className='GroupProject projectAbout'>
+                <span>XX</span>
+            </div>
+            <div className='CoinTrace projectAbout'>
+                <p className='projectAbout-name'>Cointrace</p>
+                <div className='projectAbout-about'>This is a crypto exchange project - it uses <a href='https://coingecko.com'>coingecko.com</a> API for trading crypto with fake money.</div><br></br>
+                <div className='projectAbout-technologiesHeading'>Technologies/principles used:</div>
+                <ul className='projectAbout-technologies'>
+                    <li>The big three(JS,HTML,CSS)</li>
+                    <li>(A lot of)API calls and data manipulation</li>
+                    <li>React</li>
+                    <li>Material UI</li>
+                </ul>
+                <div className='projectAbout-view'>
+                    <a href='https://github.com/Justasrimavicius/cointrace'>View code</a>
+                    <a href='https://cointrace.netlify.app/'>Live view</a>
                 </div>
-                <div className='CoinTrace projectAbout'>
-                    coin trace
-                </div>
-                <BashTerminal outerRef={terminalRef2} name={'CoinTrace'} picture={<img src={require('../../photos/coinTrace.png')} alt='coinTrace project'></img>}/>
-                <BashTerminal outerRef={terminalRef3} name={'CurlyBraces'} picture={<img src={require('../../photos/dsa.png')} alt='data structures algorithms project'></img>}/>
+            </div>
+            <BashTerminal outerRef={terminalRef2} name={'CoinTrace'} picture={<img src={require('../../photos/coinTrace.png')} alt='coinTrace project'></img>}/>
+            <BashTerminal outerRef={terminalRef3} name={'CurlyBraces'} picture={<img src={require('../../photos/dsa.png')} alt='data structures algorithms project'></img>}/>
 
-                <div className='CurlyBraces projectAbout'>
-                    curly braces
-                </div>
-                <div className='Battleships projectAbout'>
-                    batleships
-                </div>
-                <BashTerminal outerRef={terminalRef4} name={'Battleships'} picture={<img src={require('../../photos/battleship.jpeg')} alt='battleships project'></img>}/>
+            <div className='CurlyBraces projectAbout'>
+                curly braces
+            </div>
+            <div className='Battleships projectAbout'>
+                batleships
+            </div>
+            <BashTerminal outerRef={terminalRef4} name={'Battleships'} picture={<img src={require('../../photos/battleship.jpeg')} alt='battleships project'></img>}/>
             </div>
         </div>
     );
