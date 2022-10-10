@@ -17,6 +17,7 @@ function BashTerminal(props) {
     const [timesTriedToTurnOff, setTimesTriedToTurnOff] = useState(0);
 
     const [canClickRedButton, setCanClickRedButton] = useState(true);
+    const [canclickGreenButton, setCanClickGreenButton] = useState(true);
 
     let project;
     useEffect(()=>{
@@ -46,9 +47,9 @@ function BashTerminal(props) {
             }
         }, 500);
     }
-
-    function callWarning(){
-        let temp = warning;
+    let temp = warning;
+    function callWarningRedBtn(){
+        // let temp = warning;
 
         if(timesTriedToTurnOff==0){
             temp.push(`Hey! Don't try to turn me off..`);
@@ -70,6 +71,10 @@ function BashTerminal(props) {
             setTimesTriedToTurnOff(timesTriedToTurnOff + 1);
         }
         
+    }
+    function callWarningGreenBtn(){
+        temp.push(`Expanding me won't help. All of the information is already displayed.`);
+        setCanClickGreenButton(false);
     }
     
 
@@ -144,17 +149,20 @@ function BashTerminal(props) {
         <div className='BashTerminal' id={props.name} onClick={()=>{bashTerminalClicked()}} ref={props.outerRef}>
             <div className='upper-stripe'>
                 <div className='BashTerminal-buttons' onMouseEnter={()=>{setBashButtons(true)}} onMouseLeave={()=>{setBashButtons(false)}}>
-                    {canClickRedButton == true ? <div className='red' onClick={()=>{callWarning()}}><div className='red-dot'></div></div> :
+
+                    {canClickRedButton == true ? <div className='red' onClick={()=>{callWarningRedBtn()}}><div className='red-dot'></div></div> :
                     <div className='red'><div className='red-dot'></div></div>}
-                    
-                    
-                    
+
                     <div className='orange' onClick={(e)=>{minimizeProject(e)}}>
                         {bashButtons == true ? <div className='orange-dash'></div> : null}
                     </div>
+
+                    {canclickGreenButton == true ? <div className='green' onClick={()=>{callWarningGreenBtn()}}>
+                        {bashButtons == true ? <svg id="eX0bv67xGBD1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 20 20" shapeRendering="geometricPrecision" textRendering="geometricPrecision"><path d="M0,0v8L8,0h-8Z" transform="translate(1.878667 1.735637)" stroke="#191919" strokeWidth="0.5"/><path d="M16,8v8h-8l8-8Z" transform="translate(-2.714344-2.264363)" stroke="#191919" strokeWidth="0.5"/></svg> : null}
+                    </div> :
                     <div className='green'>
                         {bashButtons == true ? <svg id="eX0bv67xGBD1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 20 20" shapeRendering="geometricPrecision" textRendering="geometricPrecision"><path d="M0,0v8L8,0h-8Z" transform="translate(1.878667 1.735637)" stroke="#191919" strokeWidth="0.5"/><path d="M16,8v8h-8l8-8Z" transform="translate(-2.714344-2.264363)" stroke="#191919" strokeWidth="0.5"/></svg> : null}
-                    </div>
+                    </div> }
                 </div>
                 <div className='BashTerminal-name'><span>{props.name}-zsh--80x24</span></div>
 

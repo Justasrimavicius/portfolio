@@ -53,7 +53,17 @@ function Projects(props) {
             <div className='projects-holder'>
             <BashTerminal outerRef={terminalRef1} name={'GroupProject'} picture={<img src={require('../../photos/groupProject.jpeg')} alt='group project'></img>}/>
             <div className='GroupProject projectAbout'>
-                <span>XX</span>
+                <p className='projectAbout-name'>Group project(CURRENTLY IN PROGRESS)</p>
+                {/* <div className='projectAbout-about'></div><br></br>
+                <div className='projectAbout-technologiesHeading'>Technologies/principles used:</div>
+                <ul className='projectAbout-technologies'>
+                    <li>The big three(JS,HTML,CSS)</li>
+                    <li>Javascript loops and game logic implementation.</li>
+                </ul>
+                <div className='projectAbout-view'>
+                    <a href='https://github.com/Justasrimavicius/battleship'>View code</a>
+                    <a href='https://jr-battleships.netlify.app/'>Live view</a>
+                </div> */}
             </div>
             <div className='CoinTrace projectAbout'>
                 <p className='projectAbout-name'>Cointrace</p>
@@ -71,15 +81,36 @@ function Projects(props) {
                 </div>
             </div>
             <BashTerminal outerRef={terminalRef2} name={'CoinTrace'} picture={<img src={require('../../photos/coinTrace.png')} alt='coinTrace project'></img>}/>
-            <BashTerminal outerRef={terminalRef3} name={'CurlyBraces'} picture={<img src={require('../../photos/dsa.png')} alt='data structures algorithms project'></img>}/>
+            <BashTerminal outerRef={terminalRef3} name={'CurlyBraces'} picture={<img src={require('../../photos/dsaPhoto.jpeg')} alt='data structures algorithms project'></img>}/>
 
             <div className='CurlyBraces projectAbout'>
-                curly braces
+                <p className='projectAbout-name'>CurlyBraces</p>
+                <div className='projectAbout-about'>This is a fullstack data structures and algorithms project. Main goal - learn basic creation and implementation of various data structures and algorithms.</div><br></br>
+                <div className='projectAbout-technologiesHeading'>Technologies/principles used:</div>
+                <ul className='projectAbout-technologies'>
+                    <li>The big three(JS,HTML,CSS)</li>
+                    <li>MVC(modal-view-controller) principle</li>
+                    <li>React</li>
+                </ul>
+                <div className='projectAbout-view'>
+                    <a href='https://github.com/Justasrimavicius/curly-braces'>View code</a>
+                    <a href='https://curly-braces.netlify.app/'>Live view</a>
+                </div>
             </div>
             <div className='Battleships projectAbout'>
-                batleships
+            <p className='projectAbout-name'>Battleships</p>
+                <div className='projectAbout-about'>This is a popular old-school game "Battleships" copy. Main reason for this project was to learn mathematical logic in javascript.</div><br></br>
+                <div className='projectAbout-technologiesHeading'>Technologies/principles used:</div>
+                <ul className='projectAbout-technologies'>
+                    <li>The big three(JS,HTML,CSS)</li>
+                    <li>Javascript loops and game logic implementation.</li>
+                </ul>
+                <div className='projectAbout-view'>
+                    <a href='https://github.com/Justasrimavicius/battleship'>View code</a>
+                    <a href='https://jr-battleships.netlify.app/'>Live view</a>
+                </div>
             </div>
-            <BashTerminal outerRef={terminalRef4} name={'Battleships'} picture={<img src={require('../../photos/battleship.jpeg')} alt='battleships project'></img>}/>
+            <BashTerminal outerRef={terminalRef4} name={'Battleships'} picture={<img src={require('../../photos/battleshipsIcon.png')} alt='battleships project'></img>}/>
             </div>
         </div>
     );

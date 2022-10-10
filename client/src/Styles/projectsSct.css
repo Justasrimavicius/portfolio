@@ -1,5 +1,6 @@
 .projects{
     min-height: 1860px;
+    margin: 30px;
 }
 .BashTerminal-transition-backToGrid{
     transition: 1s all;
@@ -32,6 +33,10 @@
     transform: scale(0) rotate(90deg);
 
     transition: 1s all;
+    border: 1px solid white;
+    border-left: 0;
+    border-right: 0;
+    height: 400px;
 }
 .minimized-BashTerminal-preAnim{
     position: fixed !important;
@@ -176,6 +181,10 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+
+    background-color: rgba(128, 128, 128, 0.448);
+    border-radius: 5px;
+    padding: 10px;
 }
 
 @media (max-width: 635px){
