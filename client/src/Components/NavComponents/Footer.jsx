@@ -21,7 +21,7 @@ function Footer(props) {
                 <div className='divider'></div>
             </div>
             <div className='footer-lower'>
-                <p className='footer-email'><EmailIcon /> justinas.rimavicius1@gmail.com</p>
+                <p className='footer-email' ><EmailIcon /> justinas.rimavicius1@gmail.com</p>
                 <p className='copyright'>© twenty20two</p>
                 <a href='https://www.linkedin.com/in/justinas-rimavicius/'><LinkedIn /> LinkedIn</a>
             </div>

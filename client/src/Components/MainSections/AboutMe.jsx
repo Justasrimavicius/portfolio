@@ -70,6 +70,8 @@ function AboutMe(props) {
 
 
                                 <button className='njs'>NodeJS ecosystem</button>
+                                <button className='ts'>Typescript</button>
+
                             </div>
                         </div>
 

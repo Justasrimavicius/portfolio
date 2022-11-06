@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useEffect } from 'react';
 
 import MouseCursorEffect from '../Animations/MouseCursorEffect';
@@ -10,10 +10,15 @@ import ContactMe from './MainSections/ContactMe';
 // MUI
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { useRef } from 'react';
 
 
 
 function MainContent(props) {
+
+    const [emailCopiedAlert, setEmailCopiedAlert] = useState(false);
+
+    const emailCopiedAlertRef = useRef();
 
     function introTextEntered(e){
         setTimeout(() => {
@@ -37,8 +42,20 @@ function MainContent(props) {
             miniAbout.classList.add('fadein');miniAbout.style.opacity='1'}, 666);
     },[])
 
+    useEffect(()=>{
+        if(emailCopiedAlert){
+            setTimeout(() => {
+                emailCopiedAlertRef.current.style.opacity='0';
+                setTimeout(() => {
+                    setEmailCopiedAlert(false);
+                }, 500);
+            }, 2000);
+        }
+    },[emailCopiedAlert])
+
     return (
             <main className='MainContent'>
+                {emailCopiedAlert ? <p className='emailCopied' ref={emailCopiedAlertRef}>Email has been copied to clipboard!</p> : null}
                 <div className='gmail-dash'>
                     <a href='mailto:justinas.rimavicius1@gmail.com'>justinas.rimavicius1@gmail.com</a>
                     <div className='dash-for-gmail'></div>
@@ -80,7 +97,7 @@ function MainContent(props) {
                 </div>
                 <AboutMe aboutMeRef={props.refs.aboutMeSection}/>
                 <Projects myWorkRef={props.refs.myWorkSection}/>
-                <ContactMe contactMeRef={props.refs.contactMeSection}/>
+                <ContactMe contactMeRef={props.refs.contactMeSection} setEmailCopiedAlert={setEmailCopiedAlert}/>
             </main>
     );
 }

@@ -182,7 +182,18 @@ body{
     justify-content: right;
     align-items: center;
 }
+.emailCopied{
+    z-index: 5;
+    text-align: center;
+    position: fixed;
+    font-size: 1.8rem;
+    top: 10vh;
+    background-color: #80808045;
+    width: 100%;
+    padding: 5px;
 
+    transition: 0.5s all;
+}
 
 
 /* Mobile users css */
