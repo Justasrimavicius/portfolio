@@ -43,12 +43,10 @@ function MainContent(props) {
                     <a href='mailto:justinas.rimavicius1@gmail.com'>justinas.rimavicius1@gmail.com</a>
                     <div className='dash-for-gmail'></div>
                 </div>
-                {/* DONT FORGET TO REFERENCE Brittany Chang FOR THE SIDE DASHES */}
                 <div className='socials-dash'>
                     <div className='socials-holder'>
                         <GitHubIcon fontSize='large' onClick={()=>{window.location='https://github.com/Justasrimavicius'}}/>
                         <LinkedInIcon fontSize='large' onClick={()=>{window.location='https://www.linkedin.com/in/justinas-rimavicius/'}}/>
-                        {/* <FacebookIcon fontSize='large'/> */}
                         <div className='dash-for-socials'></div>
                     </div>
                 </div>
@@ -68,10 +66,16 @@ function MainContent(props) {
                     <div className='intro-text-miniAbout'>
                         <h4>
                             I am a web developer that specializes in frontend engineering. <br></br>
-                            I have been self-teaching since 2022 spring and have fallen in love <br></br>
-                            with the journey of continous learning!<br></br>
+                            I've been self-teaching web development technologies <br></br>
+                            and have fallen in love with the journey of continous learning! <br></br>
                         </h4>
-                        <button onClick={()=>{props.refs.contactMeSection.current.scrollIntoView()}}>CONTACT ME</button>
+                        <div className='navigating-buttons'>
+                            <button onClick={()=>{props.refs.contactMeSection.current.scrollIntoView()}}>CONTACT ME</button>
+                            <button onClick={()=>{props.refs.aboutMeSection.current.scrollIntoView()}}>MY SKILLS</button>
+                            <button onClick={()=>{props.refs.myWorkSection.current.scrollIntoView()}}>PROJECTS</button>
+                        </div>
+
+                        {/* aboutMeSection,myWorkSection,contactMeSection */}
                     </div>
                 </div>
                 <AboutMe aboutMeRef={props.refs.aboutMeSection}/>

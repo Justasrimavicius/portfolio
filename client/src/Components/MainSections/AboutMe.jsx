@@ -46,13 +46,9 @@ function AboutMe(props) {
                     {aboutMe ?
                         <div className='aboutMe-first-paragraph'>
                             <span className='aboutMe-first-paragraph-text'>
-                                Powered by coffee and sleepless nights, my web development journey started in 2022 spring. Following <a href='https://theodinproject.com'>TheOdinProject</a> and
-                                other various online and in-person resources I managed to get an understanding of how the web and its pieces work.
+                                Powered by coffee and sleepless nights, following various internet sources, youtube videos and in-person conversations with web developers I managed to get an understanding of how the web and its pieces work and obtain applicable knowledge.
                             </span>
-                            <div className='img-outline'>
-                                <img src={require('../../photos/photo.jpg')} ></img>
-                                <div></div>
-                            </div>
+
                         </div>
                     : null}
             </div>

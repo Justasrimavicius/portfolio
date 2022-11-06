@@ -113,7 +113,7 @@ body{
     text-decoration: none;
     font-size: 0.8rem;
     position: fixed;
-    bottom: 240px;
+    bottom: 235px;
     right: 0vw;
 
     transform: rotate(90deg);
@@ -150,7 +150,7 @@ body{
 /* -------------------- side sections for socials -------------------- */
 .socials-holder{
     position: fixed;
-    bottom: -16vh;
+    bottom: 0vh;
     left: 8vw;
 
     z-index: 100;
@@ -164,7 +164,7 @@ body{
 }
 .dash-for-socials{
     background-color: black;
-    height: 240px;
+    height: 100px;
     width: 2px;
     margin-left: 14.5px;
 }
@@ -176,7 +176,12 @@ body{
     transform: scale(1.1);
     color: #749EB2;
 }
-
+.navigating-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
 
 
 
@@ -192,13 +197,14 @@ body{
 
 
 
-
+    .navigating-buttons{
+        width: 90vw;
+    }
 
     .intro-text-miniAbout{
         font-size: 1.4rem;
-        margin: 0;
-        margin-top: 10vh;
-        margin-left: 20vw;
+        margin: 8vh 5vw 0 5vw !important;
+
     }
     .gmail-dash{
         visibility:hidden;
@@ -216,7 +222,8 @@ body{
     }
     .intro-text-miniAbout{
         font-size: 1.4rem;
-        margin: 0 5vw 0 50vw;
+        margin: 0 5vw 0 10vw;
+        width: 85vw;
 
     }
     .gmail-dash{

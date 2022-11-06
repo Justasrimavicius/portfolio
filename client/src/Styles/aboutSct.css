@@ -1,6 +1,6 @@
 .about{
     background-image: linear-gradient(rgb(44, 54, 57), rgb(31, 38, 39));
-    min-height: 100vh;
+    min-height: 750px;
 }
 .about h4{
     font-size: 2rem;
@@ -44,9 +44,8 @@
     opacity: 0; /* for fade in */
 }
 .aboutMe-first-paragraph img{
-    width: 200px;
-    height: 250px;
-
+    width: 250px;
+    height: 200px;
 }
 .img-outline img{
     z-index: 100;
@@ -61,7 +60,7 @@
 }
 .aboutMe-first-paragraph span{
     width: 35vw;
-    text-align: left;
+    text-align: center;
 }
 .skills{
     width: 55vw;

@@ -78,7 +78,7 @@ label{
     height: 300px;
     max-width: 100%;
 
-    max-height: 460px;
+    max-height: 400px;
 }
 .second-row label{
     margin: 15px 0 6px 0;
@@ -138,6 +138,7 @@ label{
 @media (max-width: 400px){
     .contactMe{
         height: 105vh;
+        padding-bottom: 200px;
     }
     .contactMe form{
         width: 90vw;
