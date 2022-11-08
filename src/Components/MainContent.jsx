@@ -71,13 +71,10 @@ function MainContent(props) {
                 <div className='above-fold'>
                     <div className='intro-text'>
                         <h6 className='intro-text-first' onMouseEnter={(e)=>{introTextEntered(e)}} onMouseLeave={(e)=>{introTextLeft(e)}}>
-                            Frontend
+                            Justinas
                         </h6>
                         <h6 className='intro-text-second' onMouseEnter={(e)=>{introTextEntered(e)}} onMouseLeave={(e)=>{introTextLeft(e)}}>
-                            website
-                        </h6>
-                        <h6 className='intro-text-third' onMouseEnter={(e)=>{introTextEntered(e)}} onMouseLeave={(e)=>{introTextLeft(e)}}>
-                            developer
+                            Rimavičius
                         </h6>
                     </div>
                     <div className='intro-text-miniAbout'>
