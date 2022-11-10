@@ -100,6 +100,7 @@ function Projects(props) {
                         <li>The big three(JS,HTML,CSS).</li>
                         <li>Testing(its done in most projects, but i tried to make it better here).</li>
                         <li>Typescript.</li>
+                        <li>REST API implementation.</li>
                     </ul>
                     <div className='projectAbout-view'>
                         <a href='https://github.com/Justasrimavicius/microgoogol'>View code</a>
@@ -136,6 +137,7 @@ function Projects(props) {
                         <li>The big three(JS,HTML,CSS).</li>
                         <li>(A lot of)API calls and data manipulation.</li>
                         <li>React.</li>
+                        <li>REST API implementation.</li>
                         <li>Material UI.</li>
                     </ul>
                     <div className='projectAbout-view'>

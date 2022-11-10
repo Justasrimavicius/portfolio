@@ -7,7 +7,6 @@ import AboutMe from '../Components/MainSections/AboutMe';
 import Projects from '../Components/MainSections/Projects';
 import ContactMe from './MainSections/ContactMe';
 
-// MUI
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { useRef } from 'react';
