@@ -78,7 +78,7 @@ function MainContent(props) {
                     </div>
                     <div className='intro-text-miniAbout'>
                         <h4>
-                            I am a web developer that specializes in frontend engineering. <br></br>
+                            I am a web developer that understand both the frontend and the backend. <br></br>
                             I've been self-teaching web development technologies <br></br>
                             and have fallen in love with the journey of continous learning! <br></br>
                         </h4>
