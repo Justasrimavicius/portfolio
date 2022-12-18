@@ -111,18 +111,17 @@ function Projects(props) {
             </div>
             <div className='single-project-holder' ref={project1}>
                 <div className='GroupProject projectAbout'>
-                    <p className='projectAbout-name'>Scrapyard(IN PROGRESS)</p>
-                    <div className='projectAbout-about'>This is a group project, that scrapes twitter/reddit information.</div><br></br>
+                    <p className='projectAbout-name'>Scrapyard</p>
+                    <div className='projectAbout-about'>This is a group project, that scrapes twitter/reddit information using integration between Python and Javascript.</div><br></br>
                     <div className='projectAbout-technologiesHeading'>Technologies/principles used:</div>
                     <ul className='projectAbout-technologies'>
                         <li>The big three(JS,HTML,CSS) + PYTHON</li>
                         <li>Real-time data manipulation.</li>
-                        <li>Teamwork, more in-depth github usage, code reviews, contribution to meetings.</li>
+                        <li>Teamwork, more in-depth github usage, code reviews, contribution to meetings, documentation writing.</li>
                     </ul>
                     <div className='projectAbout-view'>
                         <a href='https://github.com/Justasrimavicius/teamProject'>View code</a>
-                        {/* <a href='https://cointrace.netlify.app/'>Live view</a> */}
-                        <a>Live view currently not available</a>
+                        <a href='https://project-opa.netlify.app/'>Live view</a>
                     </div>
                 </div>
                 <BashTerminal outerRef={terminalRef1} name={'GroupProject'} picture={<img src={require('../../photos/groupProject.png')} alt='group project'></img>}/>
